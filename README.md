@@ -17,11 +17,12 @@ Features
 Usage
 -----
 
-There are three main components:
+There are four main components:
 
 - Container
 - Row
 - Column
+- Offsets
 
 ### Container
 
@@ -60,3 +61,10 @@ Of course we could do
       +grid-column(4)
       
 But our grid wouldn't automaticlaly reduce to halves on tablet. It would, however, go full-width on mobile.
+
+### Offsets
+
+For offsets, just pass in a 1-12 value as the second parameter to `grid-column`
+
+    .mysidebar
+      +grid-column(4, 8)
