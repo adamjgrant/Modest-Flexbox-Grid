@@ -1,54 +1,61 @@
-section.container
+doctype html
 
-  h1 Simple flexbox grid
+html
+  head
+    link(rel="stylesheet" href="style.css")
 
-  article.content
-    .main 
-      p This is the main pane. I will be 2/3rds on desktop, 1/2 on tablet, and full on mobile.
-      
-      h2 Features
-      
-      ul
-        li Automatic breakpoints for columns on mobile and tablet
-        li Mobile first
-        li Flexbox
-        li Lightweight, only outputs css you define
-        li Does not dictate classes. As a mixin-only library, you define the classes that will inherit grid properties.
+  body 
+    section.container
 
-      h2 Usage
+      h1 Simple flexbox grid
 
-      p There are three main components:
-      
-      ul
-        li Container
-        li Row
-        li Column
-        
-      h3 Container
-      p The container just wraps the page with automatic breakpoints for larger screens.
-      
-      p
-        pre .mycontainer
-          |   +grid-container
-      
-      h3 Row
-      p The row's responsibility is simply to group column components.
-      
-      p
-        pre .myrow
-          |   +grid-row
-      
-      h3 Column
-      p Columns are defined as a certain number of columns out of a total possible 12.
-      p Columns don't have to be defined as a number. If making a column 1/2, 2/3, or 1/3 wide, I recommend just passing in
-        ul
-          li "half"
-          li "twothirds"
-          li "third"
-      p ...respectively. For example,
-      
-      pre +grid-column('third')
-      
-      p Note that the "+" is shorthand for "@include" in Sass.
-      
-    .news-feed I am a news feed! I will be 1/3 on desktop, 1/2 on tablet, and full on mobile.
+      article.content
+        .main 
+          p This is the main pane. I will be 2/3rds on desktop, 1/2 on tablet, and full on mobile.
+          
+          h2 Features
+          
+          ul
+            li Automatic breakpoints for columns on mobile and tablet
+            li Mobile first
+            li Flexbox
+            li Lightweight, only outputs css you define
+            li Does not dictate classes. As a mixin-only library, you define the classes that will inherit grid properties.
+
+          h2 Usage
+
+          p There are three main components:
+          
+          ul
+            li Container
+            li Row
+            li Column
+            
+          h3 Container
+          p The container just wraps the page with automatic breakpoints for larger screens.
+          
+          p
+            pre .mycontainer
+              |   +grid-container
+          
+          h3 Row
+          p The row's responsibility is simply to group column components.
+          
+          p
+            pre .myrow
+              |   +grid-row
+          
+          h3 Column
+          p Columns are defined as a certain number of columns out of a total possible 12.
+          p Columns don't have to be defined as a number. If making a column 1/2, 2/3, or 1/3 wide, I recommend just passing in
+            ul
+              li "half"
+              li "twothirds"
+              li "third"
+          p ...respectively. For example,
+          
+          pre +grid-column('third')
+          
+          p Note that the "+" is shorthand for "@include" in Sass.
+          
+        .news-feed I am a news feed! I will be 1/3 on desktop, 1/2 on tablet, and full on mobile.
