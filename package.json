@@ -1,0 +1,24 @@
+{
+  "name": "Modest-Flexbox-Grid",
+  "version": "1.0.0",
+  "description": "A modest flexbox grid sass mixin library with automatic breakpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajkochanowicz/Modest-Flexbox-Grid.git"
+  },
+  "author": "Adam Kochanowicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajkochanowicz/Modest-Flexbox-Grid/issues"
+  },
+  "homepage": "https://github.com/ajkochanowicz/Modest-Flexbox-Grid",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-jade": "^0.7.0",
+    "gulp-ruby-sass": "^0.7.1"
+  }
+}
