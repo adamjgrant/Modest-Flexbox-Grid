@@ -17,6 +17,10 @@ Features
 Usage
 -----
 
+Download or install via NPM
+
+    npm install flexbox-grid
+
 There are four main components:
 
 - Container

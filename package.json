@@ -1,5 +1,5 @@
 {
-  "name": "Modest-Flexbox-Grid",
+  "name": "flexbox-grid",
   "version": "1.0.0",
   "description": "A modest flexbox grid sass mixin library with automatic breakpoints",
   "main": "index.js",
