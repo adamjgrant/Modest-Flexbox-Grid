@@ -7,7 +7,7 @@ gulp.task('default', function() {
     .pipe(jade())
     .pipe(gulp.dest('./'))
 
-  gulp.src('grid.sass')
+  gulp.src('style.sass')
     .pipe(sass())
     .pipe(gulp.dest('./'))
 });
