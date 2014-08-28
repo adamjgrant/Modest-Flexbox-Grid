@@ -1,6 +1,8 @@
 Modest-Flexbox-Grid
 ===================
 
+[Demo](http://ajkochanowicz.github.io/Modest-Flexbox-Grid.)
+
 Sass mixins for creating a simple flexbox grid with automatic breakpoints
 
 Features
