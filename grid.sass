@@ -1,0 +1,79 @@
+// 1/2 The snippet
+
+$phone: 360px
+$phablet: 480px
+$tablet: 768px
+$tablet-landscape: 960px
+$desktop: 1024px
+$large-monitor: 1200px
+$xl-monitor: 1400px
+ 
+$grid-columns: 12
+$grid-gutter: 15px
+
+=grid-container
+  margin: 0px auto
+  display: block
+  max-width: $tablet
+  padding:
+    left: 25px
+    right: 25px
+    
+  @media screen and (min-width: $tablet-landscape)
+    max-width: $desktop
+    
+  @media screen and (min-width: $large-monitor)
+    max-width: $large-monitor
+ 
+=grid-row
+  display: -webkit-box
+  display: -o-flex
+  display: -moz-flex
+  display: -webkit-flex
+  display: flex
+  width: 100%
+  -o-justify-content: space-between
+  -ms-justify-content: space-between
+  -moz-justify-content: space-between
+  -webkit-justify-content: space-between
+  justify-content: space-between
+  align-items: stretch
+  -ms-flex-wrap: wrap
+  -moz-flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
+ 
+=set-grid-column($columns, $offset)
+  width: 100%
+  display: block
+  margin-left: 0
+ 
+  @media screen and (min-width: $tablet)
+    width: calc(#{percentage($columns/$grid-columns)} - #{$grid-gutter})
+    clear: none
+ 
+  @if $offset > 0
+    @media screen and (min-width: $desktop)
+      margin-left: percentage($offset/$grid-columns)
+ 
+=grid-column($type: 12, $offset: 0)
+  +set-grid-column(12, 0)
+  @if $type == "half"
+    @media screen and (min-width: $tablet)
+      +set-grid-column($grid-columns/2, 0)
+  @else if $type == "third"
+    @media screen and (min-width: $phablet)
+      +set-grid-column($grid-columns/2, 0)
+    @media screen and (min-width: $tablet)
+      +set-grid-column($grid-columns/3, 0)
+  @else if $type == "twothirds"
+    @media screen and (min-width: $phablet)
+      +set-grid-column($grid-columns/2, 0)
+    @media screen and (min-width: $tablet)
+      +set-grid-column(($grid-columns * 2/3), 0)
+  @else
+    @media screen and (min-width: $tablet)
+      +set-grid-column($type, $offset)
+ 
+.grid-row
+
