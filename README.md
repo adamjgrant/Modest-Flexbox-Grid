@@ -29,6 +29,8 @@ The container just wraps the page with automatic breakpoints for larger screens.
 
     .mycontainer
       +grid-container
+      
+(Note the "+" is shorthand for "@include" in Sass.)
 
 ### Row
 
@@ -43,5 +45,18 @@ Columns are defined as a certain number of columns out of a total possible 12.
 
 Columns don't have to be defined as a number. If making a column 1/2, 2/3, or 1/3 wide, I recommend just passing in "half", "twothirds", "third" respectively. For example,
 
-+grid-column('third')
-Note that the "+" is shorthand for "@include" in Sass.
+    .mymainpane
+      +grid-column('twothirds')
+
+    .mysidebar
+      +grid-column('third')
+
+Of course we could do
+
+    .mymainpane
+      +grid-column(8)
+
+    .mysidebar
+      +grid-column(4)
+      
+But our grid wouldn't automaticlaly reduce to halves on tablet. It would, however, go full-width on mobile.
