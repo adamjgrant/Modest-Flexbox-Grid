@@ -21,24 +21,21 @@ There are three main components:
 - Row
 - Column
 
-Container
-^^^^^^^^^
+### Container
 
 The container just wraps the page with automatic breakpoints for larger screens.
 
     .mycontainer
       +grid-container
 
-Row
-^^^
+### Row
 
 The row's responsibility is simply to group column components.
 
     .myrow
       +grid-row
 
-Column
-^^^^^^
+### Column
 
 Columns are defined as a certain number of columns out of a total possible 12.
 
